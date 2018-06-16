@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ListarPaciente" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9e5618ce-224c-45fc-b65f-90dece3d80c3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select cpf_Esp, nome_Esp, sobrenome_Esp, cel_Esp, email_Esp from especialista]]>
+	</queryString>
+	<field name="cpf_Esp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome_Esp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sobrenome_Esp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cel_Esp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email_Esp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="69" splitType="Stretch">
+			<staticText>
+				<reportElement x="98" y="0" width="457" height="69" uuid="e7d48c92-72f4-4f0a-a54d-c8a9b644074f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Universidade Estadual do Sudoeste do Estado da Bahia - UESB]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="100" height="69" uuid="030d9eb9-c056-42d4-8869-fdd6dbbef5be"/>
+				<imageExpression><![CDATA["C:\\Users\\misae\\OneDrive\\Documentos\\projetoSemestre\\relatorios\\Logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="59" uuid="c057c99f-8714-4ce2-96b6-b57e97520814"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Especialista Cadastrados]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="25" uuid="c09828a4-3b41-4748-a097-ddfb7c2eb4a2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="111" y="5" width="111" height="20" uuid="0aa60a8d-969c-4ca4-b733-ee93f1dd76d4"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="5" width="111" height="20" uuid="5a2b314c-2e7b-4ec1-a149-a0377cdad5d4"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sobrenome:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="5" width="90" height="20" uuid="f293f4cc-666d-4d00-b8c2-3c6062e8d608"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefone:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="5" width="132" height="20" uuid="deb1ceaa-e53d-47ea-9fd6-7e12cec68e87"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-mail:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="5" width="111" height="20" uuid="7bd6b5fc-a854-4c13-a62f-05aa87db7ece"/>
+				<textElement>
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CPF:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="27" uuid="6521e0fc-f79b-411c-9524-161eb59016fd"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="4" width="111" height="20" uuid="3cbe2557-a44f-40cc-8689-5fdd524edb30"/>
+				<textFieldExpression><![CDATA[$F{cpf_Esp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="4" width="111" height="20" uuid="50a7d0db-cf04-48bb-8da9-b25acd41ccd6"/>
+				<textFieldExpression><![CDATA[$F{nome_Esp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="4" width="111" height="20" uuid="45583891-93d6-41ee-99de-6196e74f6134"/>
+				<textFieldExpression><![CDATA[$F{sobrenome_Esp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="4" width="90" height="20" uuid="3d7220ec-5b3f-4673-91ec-ce0ae94eeaee"/>
+				<textFieldExpression><![CDATA[$F{cel_Esp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="423" y="4" width="132" height="20" uuid="48aa8aea-4b68-4d9b-aa00-cbd701d6f1d2"/>
+				<textFieldExpression><![CDATA[$F{email_Esp}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="23" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="0" width="555" height="22" uuid="fd34d7d8-dac4-449c-b01d-c1f028a10ba7"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="435" y="2" width="80" height="20" uuid="0a0356e9-e32b-4476-8050-428311a27e31"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="2" width="40" height="20" uuid="b6c5efa4-925d-4b0a-bd11-2378827abe77"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
